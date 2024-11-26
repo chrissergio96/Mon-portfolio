@@ -86,6 +86,11 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+.buto p{
+  text-align: center;
+  padding-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -211,6 +216,7 @@ h6 {
   .header~#footer {
     margin-left: 300px;
   }
+ 
 }
 
 @media (max-width: 1199px) {
@@ -318,48 +324,11 @@ h6 {
   color: var(--accent-color);
 }
 
-.navmenu .active .toggle-dropdown,
-.navmenu .active:focus .toggle-dropdown {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  transform: rotate(180deg);
-}
 
-.navmenu .dropdown {
-  display: block;
-}
 
-.navmenu .dropdown a,
-.navmenu .dropdown a:focus {
-  color: --nav-dropdown-color;
-}
 
-.navmenu .dropdown a:hover,
-.navmenu .dropdown .active,
-.navmenu .dropdown .active:focus {
-  color: var(--nav-dropdown-hover-color);
-}
 
-.navmenu .dropdown ul {
-  position: static;
-  display: none;
-  z-index: 99;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  background-color: var(--nav-dropdown-background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-shadow: none;
-  transition: all 0.5s ease-in-out;
-}
 
-.navmenu .dropdown ul ul {
-  background-color: rgba(33, 37, 41, 0.1);
-}
-
-.navmenu .dropdown>.dropdown-active {
-  display: block;
-  background-color: rgba(33, 37, 41, 0.03);
-}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -459,6 +428,7 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+ 
 }
 
 /*--------------------------------------------------------------
@@ -589,6 +559,8 @@ section,
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: gold;
+  font-weight: bold;
 }
 
 .hero .social-links {
@@ -607,10 +579,18 @@ section,
 .hero .social-links a:hover {
   color: var(--accent-color);
 }
-
+.lien{
+  width: 40px;
+}
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
+  }
+ 
+
+  #telecharge{
+    font-size: 11px;
+    color: gold;
   }
 
   .hero p {
