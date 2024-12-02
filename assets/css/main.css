@@ -91,6 +91,11 @@ h6 {
   padding-bottom: 10px;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.buto :hover{
+ color:#FFD700;
+}
+
+
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -586,16 +591,20 @@ section,
   .hero h2 {
     font-size: 32px;
   }
- 
+  #telecharge:hover{
+    color:white;
+   }
 
   #telecharge{
     font-size: 11px;
     color: gold;
+    margin-top: 5px;
   }
 
   .hero p {
     font-size: 20px;
   }
+
 }
 
 /*--------------------------------------------------------------
