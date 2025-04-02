@@ -97,6 +97,7 @@ h6 {
 
 
 
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -564,7 +565,7 @@ section,
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
-  color: gold;
+  color: #1B3D71;
   font-weight: bold;
 }
 
