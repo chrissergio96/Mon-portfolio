@@ -1263,7 +1263,7 @@ section,
   height: min-content;
   justify-content: center;
   border-radius: 8px;
-  background-color: #1B3D71;
+  background-color: #a8a9b4;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -1277,9 +1277,10 @@ section,
 
 /* Animation au survol */
 .buto:hover {
-  background-color: gold;   /* couleur plus claire */
+  background-color: transparent;   /* couleur plus claire */
   transform: scale(1.05);      /* bouton qui grandit un peu */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border: gold solid;
 }
 
 /* Effet au clic */
