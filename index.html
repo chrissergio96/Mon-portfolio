@@ -28,6 +28,8 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 
+
+
 </head>
 
 <body class="index-page">
@@ -96,7 +98,6 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
             <h2>Developpeur web &amp;Designer UI.</h2>
@@ -331,15 +332,18 @@
         <p>Voici une sélection de projets sur lesquels j'ai travaillé en tant que développeur web , mettant en avant mes compétences dans le développement d'applications, le design de produits numériques, et la gestion de projets.
         </p>
       </div><!-- End Section Title -->
-      <div class="merecard" style="display: flex;justify-content:space-around">
+      <div class="merecard" style="display: flex;grid-template-columns: 1fr 1fr 1f; gap: 10px;padding: 5px;">
       <div class="card" style="background-image:url(assets/img/portfolio/Mairie\ de.png);background-size:cover;border:none;">
         <a href="https://site-mairie2arr-pog.vercel.app/"><p>Site web de la Mairie du 2e Arr de Port-Gentil</p></a>
       </div>
-      <div class="card" style="background-image:url(assets/img/portfolio/Maquette\ Gestion\ de\ taches.png);background-size:cover;border:none; ">
+      <!-- <div class="card" style="background-image:url(assets/img/portfolio/Maquette\ Gestion\ de\ taches.png);background-size:cover;border:none; ">
         <a href="https://gestion-de-tache.vercel.app/"><p>Application de gestion des taches</p></a>
-      </div>
+      </div> -->
        <div class="card" style="background-image:url(/web\ tv\ gabon.PNG);background-size:cover;border:none; ">
         <a href="https://webtvgabon-11xh.vercel.app/"><p>Site web media en ligne</p></a>
+      </div>
+      <div class="card" style="background-image:url(/assets/img/portfolio/election.PNG);background-size:cover;border:none; ">
+        <a href="https://election-presidentielle.vercel.app/"><p>Logiciel de centralisation de données électorales</p></a>
       </div>
       
     </div>
@@ -441,42 +445,34 @@
 
               </div>
           </div>
+<!-- Formulaire Contact -->
+<div class="col-lg-7">
+<form id="contact-form">
+  <input type="text" name="name" required placeholder="Votre nom">
+  <input type="email" name="email" required placeholder="Votre email">
+  <input type="text" name="subject" required placeholder="Objet">
+  <textarea name="message" rows="5" required placeholder="Message"></textarea>
+  <button type="submit">Envoyer</button>
+</form>
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-          
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Votre nom</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required>
-                </div>
-          
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Votre Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Objet</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
-                </div>
-          
-                <div class="col-md-12 text-center">
-                  <div class="loading">Envoi...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Votre message a été envoyé. Merci!</div>
-          
-                  <button type="submit">Envoyer le message</button>
-                </div>
-          
-              </div>
-            </form>
-          </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init('lxutJzOb8ZI5A-AfI');
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  emailjs.sendForm('service_c43cc5l', 'template_ae02dpq', this)
+    .then(() => {
+      alert('Message envoyé avec succès !');
+      this.reset();
+    }, (error) => {
+      alert('Erreur : ' + JSON.stringify(error));
+    });
+});
+</script>
+
+
+
           <!-- End Contact Form -->
 
         </div>
@@ -517,6 +513,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+
 
 </body>
 
